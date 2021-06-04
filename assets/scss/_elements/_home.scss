@@ -1,0 +1,203 @@
+/* Home styling
+========================================================================== */
+
+#csg-container {
+	header{
+		position: absolute;
+		top: 10%;
+		right: 0;
+		background-color: $eyOffBlack;
+		.btn-header{
+			color: $eyOffWhite;
+			font-size: 16px;
+			font-family: EYInterstate-Light;
+			width: 100%;
+			height: 100%;
+			display: block;
+			padding-right: 111px;
+			padding-left: 10px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			background-image: url(https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/external-link.png);
+			background-repeat: no-repeat;
+			background-position: 95% center;
+			background-size: 16px;
+			cursor: pointer;
+			text-decoration: none!important;
+			@include mq($from: tablet) { 
+				padding-left: 10px;
+				padding-top: 10px;
+				font-size: 19px;
+			}
+			
+			&:hover{
+				text-decoration: none;
+				color: $eyYellow;
+			}
+		}
+	}
+	.csg-home{
+		&-wrapper {
+			width: 100%;
+			height: 100%;
+			background-image: url('https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/csg-banner.png');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			position: fixed;
+		}
+		&-innerwrapper{
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			padding: 0 0 0 10px;
+			@include mq($from: tablet) { 
+				padding: 0 0 0 4%;
+			}
+			@include mq($from: desktop) { 
+				padding: 0 0 0 10%;
+			}
+		}
+		&-introLine{
+			color: $eyOffWhite;
+			font-size: 16px;
+			font-family: EYInterstate-Light;
+			&-Yellow{
+				color: $eyYellow;
+			}
+			@include mq($from: tablet) { 
+				font-size: 20px;
+			}
+		}
+		&-heading{
+			padding: 15px 0 20px 0;
+			color: $eyOffWhite;
+			@include mq($from: tablet) { 
+				padding: 15px 0 60px 0;
+			}
+			&-Top{
+				font-size: 44px;
+				font-family: EYInterstate-Regular;
+				display: block;
+				margin-top: 15px;
+				@include mq($from: tablet) { 
+					font-size: 60px;
+				}
+				@include mq($from: desktop) { 
+					font-size: 70px;
+				}
+			}
+			&-Bottom{
+				font-size: 28px;
+				font-family: EYInterstate-Light;
+				display: block;
+				line-height: 36px;
+				@include mq($from: tablet) { 
+					font-size: 60px;
+				}
+				@include mq($from: desktop) { 
+					font-size: 50px;
+				}
+			}
+
+		}
+		&-btnWrapper{
+			width: 90px;
+    		height: 90px;
+			.btn-submit{
+				position: relative;
+
+				&-outerWrapper{
+				background-image: url('https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/Btn_Submit_a_job.png');
+				display: block;
+				height: 66px;
+				width: 66px;
+				background-size: 100%;
+				background-repeat: no-repeat;
+				@include mq($from: tablet) { 
+					background-size: 90%;
+					height: 100%;
+					width: 100%;
+				}
+				@include mq($from: desktop) { 
+					background-size: 100%;
+				}
+				}
+				&-outerCircle{
+					opacity: 0;
+					transform: rotate(-180deg);
+					background-image: url('https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/Path 3.png');
+					background-repeat: no-repeat;
+					background-size: 98%;
+					display: block;
+					width:66px;
+					height: 66px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					-webkit-transition: -webkit-transform .8s ease-in-out;
+					-ms-transition: -ms-transform .8s ease-in-out;
+					transition: transform .8s ease-in-out;
+				@include mq($from: tablet) { 
+					width: 75px;
+					height: 75px;
+				}
+				@include mq($from: desktop) { 
+					width: 90px;
+					height: 90px;
+				}
+					.btn-submit-ellipse{
+						background-image: url('https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/Ellipse 1.png');
+						background-repeat: no-repeat;
+						background-position: center;
+						width: 100%;
+						display: block;
+						height: 100%;
+						opacity: 0;
+						-webkit-transition: -webkit-opacity .8s ease-in-out;
+						-ms-transition: -ms-opacity .8s ease-in-out;
+						transition: opacity .8s ease-in-out;
+					}
+				}
+
+				&-text{
+					   background-image: url('https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/Submit a job.png');
+						background-repeat: no-repeat;
+						background-position: center;
+						opacity: 0;
+						display: block;
+						width: 175px;
+						display: block;
+						height: 0;
+						position: absolute;
+						top: 0;
+						left: 90px;						
+						-webkit-transition: -webkit-opacity .8s ease-in-out;
+						-ms-transition: -ms-opacity .8s ease-in-out;
+						transition: opacity .8s ease-in-out;
+						
+				}
+				&:hover{
+					.btn-submit-outerCircle{
+						opacity: 1;
+						transform: rotate(0deg);
+						.btn-submit-ellipse{
+							opacity: 1;
+						}
+						
+					}
+					.btn-submit-outerWrapper{
+						opacity: 0;
+					}
+					.btn-submit-text{
+						opacity: 1;
+						height: 90px;
+					}
+					
+					
+				}
+			}
+		}
+   }
+	
+}

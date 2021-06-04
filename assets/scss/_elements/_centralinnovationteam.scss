@@ -1,0 +1,105 @@
+/* What is wavespace styling
+========================================================================== */
+
+#waveMainWrapper {
+	.nodelabel{
+		font-family: EYInterstate-Light;
+		@include fontSize(10px);
+	}
+
+	.wave__innovation-listitem {
+		width: 16%;
+		float: left;
+		list-style: none;
+		margin-left: 11%;
+
+		&:first-child {
+			margin-left: 0;
+		}
+		
+		.wave__page-overlayed-box {
+			position: relative;
+			width: 100%;
+			
+			.wave__page-overlayed-content {
+				position: absolute;
+				margin: 0px auto;
+				bottom: 1%;
+				left: 0;
+				right: 0;
+				background: $eyYellow;
+				overflow: hidden;
+				width: 100%;
+				height: 0;
+				transition: .75s ease-in;
+				color: $white;
+				//height: 14%;
+				padding: 5%;
+				line-height: 1em;
+
+				&:hover {
+					height: auto;
+				}
+
+				p {
+					padding: 4% 0;
+				}
+
+				@include mq($from: desktopWide) {      
+					@include fontSize(16px);
+				}
+
+				@include mq($from: tablet, $until: desktopWide) {      
+					@include fontSize(12px);
+				}
+			}
+		}
+	}
+
+	.wave__total-callout {
+		width: 50%;
+		margin: 0 auto 30px;
+		text-align: center;
+		line-height: 1;
+		z-index: 9;
+
+		@include mq($from: tablet) { 
+			width: 12%;
+			position: absolute;
+			right: 8%;
+			margin: 0;
+		}
+
+		@include mq($from: desktopWide) {
+			width: 10%;
+			right: 8%;
+		}
+
+		.wave__innovation_champions_number {
+			@include fontSize(60px);
+
+			@include mq($from: tablet) { 
+				@include fontSize(64px);
+				margin-bottom: 0;
+			}
+		}
+
+		.wave__innovation_champions_subtitle1 {
+			@include fontSize(30px);
+			font-weight: 400;
+
+			@include mq($from: tablet) { 
+				@include fontSize(20px);
+			}
+		}
+
+		.wave__innovation_champions_subtitle2 {
+			@include fontSize(20px);
+
+			@include mq($from: tablet) { 
+				@include fontSize(10px);
+			}
+		}
+	}
+
+}

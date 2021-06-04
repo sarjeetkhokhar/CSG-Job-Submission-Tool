@@ -1,0 +1,51 @@
+/**
+ * EY - CSG- Job Submission Tool - Custom styles
+ *
+ * @author: EY
+ * @version v0.0.1
+ */
+
+
+$mq-responsive: true;
+
+$mq-breakpoints: (
+    mobile:  320px,
+    midMobile: 480px,
+    tablet:  740px,
+    desktop: 	980px,
+    desktopMid:    1135px,
+    desktopWide:    1400px,
+    desktopXL:    1800px
+);
+
+$mq-static-breakpoint: desktop;
+//$mq-show-breakpoints: (mobile, midMobile, tablet, desktop, desktopMid, desktopWide, desktopXL);
+
+//Third Party 
+@import '_third-party/_sass-mq';
+@import '_third-party/_normalize';
+@import '_third-party/_odometer-theme-default';
+
+//Tools
+@import '_tools/_helpers';
+@import '_tools/_variables';
+@import '_tools/_mixins';
+@import '_tools/_sharepoint';
+//Base 
+@import '_base/_base';
+@import '_base/_typography';
+@import '_base/_buttons';
+
+//Elements
+@import '_elements/_home';
+@import '_elements/_service';
+@import '_elements/_product';
+@import '_elements/_form';
+@import '_elements/_assets';
+
+// Print Stylesheets
+@media print {
+   // @import '_media/_print';
+}
+
+

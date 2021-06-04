@@ -1,0 +1,139 @@
+/* Badges Stats page
+========================================================================== */
+
+#waveMainWrapper {
+
+	.wave__page-list--badges{
+		min-height: 375px;
+		background-color: #47474f;
+		text-align: center;
+		padding: 10%;
+
+		h2 {
+			color: $eyYellow;
+			@include fontSize(40px);
+			letter-spacing: 1px;
+			line-height: 1em;
+    		font-weight: 500;
+		}
+
+		h4 {
+			color: $white;
+			@include fontSize(24px);
+		}
+
+		ul {
+			margin:0;
+			padding:0;
+			text-align: center;
+			list-style:none;                
+		}
+
+		ul  li {
+			padding: 2px 5px;               
+		}
+	}
+
+	.highcharts-axis-line, .highcharts-yaxis-labels, 
+	.highcharts-yaxis .highcharts-axis-title
+	{
+		display: none;
+	}
+
+	.highcharts-grid-line {
+		display: none;
+	}	
+
+	.wave__badges-listitem {
+		width: 30%;
+		float: left;
+		list-style: none;
+		margin-left: 2%;
+		font-family: EYInterstate-Light;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		.wave__tile-img {
+			padding-top: 5%;
+		}
+	}
+
+	.wave__badge-callout-img {
+		width: 65%;
+		height: auto;
+	}
+
+	.wave__badge-callout {
+		width: 50%;
+		margin: 0 auto 30px;
+		
+		@include mq($from: tablet) { 
+			width: 12%;
+			position: absolute;
+			top: 11%;
+			right: 8%;
+			margin: 0;
+		}
+
+		@include mq($from: desktopWide) {
+			width: 10%;
+			top: 14%;
+			right: 8%;
+		}
+		
+	}
+
+	.wave__chart-title-cont {
+		width: 100%;
+		display: inline-block;
+		padding-bottom: 30px;
+
+		.wave__chart-title--bar {
+			width: 45%;
+			display: inline-block;
+		}
+
+		.wave__chart-title--pie {
+			width: 45%;
+			display: inline-block;
+		}
+
+		.wave__badges-title {
+			color: #333333;
+	    	@include fontSize(22px);
+	    	font-family: EYInterstate-Regular;
+	    	text-align: center;
+	    }
+	}
+	
+
+	.highcharts-title {
+		display: none !important;
+	}
+
+	.pieLabels, .highcharts-subtitle {
+		@include fontSize(14px);
+		
+		@include mq($from: tablet) { 
+			@include fontSize(12px);
+		}
+
+	}
+
+	.wave__badget-chart {
+		display: inline-block;
+		vertical-align: bottom;
+
+		&.barChart {
+			width: 40%;
+		}
+
+		&.pieChart {
+			width: 55%;
+		}
+	}
+	
+
+}

@@ -1,0 +1,42 @@
+<div class="csg-product-wrapper" ng-controller="csgProductsCtrl">
+    <div class="csg-service-innerWrapper">
+        <div class="csg-breadcrumbs">
+            <ul class="csg-breadcrumbs-ul">
+                <li class="csg-breadcrumbs-list">
+                    <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home" class="csg-breadcrumbs-list-clickableAnchor">Home</a>
+                </li>
+                <li class="csg-breadcrumbs-list">
+                    <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home/services" class="csg-breadcrumbs-list-clickableAnchor">Services</a>
+                </li>
+                <li class="csg-breadcrumbs-list">
+                    {{pageName}}
+                </li>
+            </ul>
+            </div>
+    <h2 class="heading-bar">{{pageName}}</h2>
+    <div class="csg-services-container">
+        <div class="csg-services-topWrapper">
+            <div class="csg-services-assets">
+                <h3 class="csg-services-about">Which Product?</h3>
+            </div>
+            <div class="csg-services-products">
+                <ul class="csg-btn-lists">
+                    <li class="csg-btn-lists-listItem" ng-repeat="products in productsAvailable">
+                        <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home/services/{{pageName}}/{{products.Title}}" class="csg-btn-lists-listItem-anchor">
+                            {{products.Title}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+      
+    </div>
+   
+    <footer>
+        <div class="ey-logo">
+            <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home" class="ey-logo-anchor"><img src="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/SiteAssets/job-submission-tool/assets/img/Logo.png" alt="logo" class="ey-logo-img"/></a>
+        </div>
+    </footer>
+   </div>
+</div>

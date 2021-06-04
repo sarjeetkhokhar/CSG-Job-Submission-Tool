@@ -1,0 +1,36 @@
+/* Buttons
+   ========================================================================== */
+
+#waveMainWrapper {
+
+.wave__sub-section-btn {
+	width: auto;
+	background: $eyGrayDark;
+	color: $white;
+	font-family: EYInterstate-Light;
+    @include fontSize(20px);
+	padding: 20px;
+	margin-bottom: 6px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+  	transition: all .5s;
+  	cursor: pointer;
+  	border: 2px solid $eyGrayDark;
+
+	@include mq($from: tablet) { 
+		min-width: 350px;
+	}
+
+	&:hover {
+		color: $eyGrayDark;
+		background: $white;
+		text-decoration: none;
+		&:after{
+		  transition: all .5s;
+		}
+	}
+
+}
+
+}

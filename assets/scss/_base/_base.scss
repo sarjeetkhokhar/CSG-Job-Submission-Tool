@@ -1,0 +1,460 @@
+/* Base styling
+========================================================================== */
+
+.heading-bar{
+    font-size: 31px;
+    font-family: EYInterstate-Light;
+    color: $eyOffWhite!important;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    @include mq($from: tablet) {
+      font-size: 40px;
+      margin-bottom: 25px;
+    }
+    @include mq($from: desktop) {
+      font-size: 55px;
+    }
+    &::before{
+        content: '';
+        width: 26%;
+        height: 4px;
+        background-color: $eyYellow;
+        display: block;
+        @include mq($from: tablet) { 
+          font-size: 40px;
+          width: 28%;
+        }
+        @include mq($from: desktop) { 
+          font-size: 55px;
+          width: 140px;
+        }
+    }
+}
+.csg-breadcrumbs{
+    margin-bottom: 15px;
+    @include mq($from: tablet) { 
+      margin-bottom: 25px;
+    }
+    @include mq($from: desktop) { 
+      margin-bottom: 35px;
+    }
+    &-ul{
+        padding: 0;
+        .csg-breadcrumbs-list{
+            list-style: none;
+            display: inline-block;
+            color: $eyOffWhite;
+            &-clickableAnchor{
+                color: $eyOffWhite;
+                position: relative;
+                font-size: 16px;
+                margin-right: 15px;
+            
+                &::after{
+                    content: '>';
+                    position: absolute;
+                    right: -14px;
+                }
+            }
+        } 
+    }
+}
+.csg-btn-lists{
+      display: flex;
+      flex-wrap: wrap;
+     /*  justify-content: space-evenly; */
+      padding: 0;
+      margin: 0;
+    @include mq($from: tablet) { 
+      margin-top: 10px;
+    }
+    @include mq($from: desktop) { 
+      margin-left: 20px;
+      margin-top: 0;
+    }
+    &-listItem{
+        list-style: none;
+        /* flex-basis: 18%; */
+        /* height: 30px; */
+        margin-bottom: 10px;
+        &-anchor{
+            color: $eyOffWhite!important;                  
+            font-size: 19px;
+            display: inline-block;
+            background-color: $eyOffBlack;
+            padding: 8px 30px;
+           
+             text-decoration: none!important;
+             @include mq($from: tablet) { 
+               margin-right: 8px;
+             }
+             @include mq($from: desktop) { 
+              margin-right: 24px;
+            
+            }
+                &:hover {
+                 color: $eyYellow!important;
+                 
+                }
+              
+        }
+    }
+}
+.csg-services{
+    &-container{
+        margin: 15px 0;
+        @include mq($from: tablet) { 
+          margin: 35px 0;
+          }
+    }
+    &-topWrapper {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    &-assets {
+      flex-basis: 100%;
+      @include mq($from: tablet) { 
+        flex-basis: 15%;
+    }
+    }
+    &-products{
+      display: flex;
+      flex-basis:100%;
+      @include mq($from: desktop) { 
+        flex-basis: 83%;
+      }
+    }
+    &-about{
+        font-size: 22px;
+        color: $eyOffWhite;
+        font-family: EYInterstate-Light;
+        margin: 0;
+        display: flex;
+        @include mq($from: tablet) { 
+          font-size: 30px;
+          display: inline-flex
+          }
+        
+    }
+    
+}
+.label-container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    color: $eyOffWhite;
+    font-family: EYInterstate-Light;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 500;
+    @include mq($from: tablet) { 
+      font-size: 15px;
+      padding-left: 24px;
+      }
+      @include mq($from: desktop) { 
+        font-size: 20px;
+        padding-left: 28px;
+      }
+    &:before {
+        content: '';
+        width: 12px;
+        background: white;
+        height: 12px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        margin-top: 2px;
+        border: 1px solid #707070;
+        @include mq($from: tablet) { 
+          font-size: 15px;
+          height: 15px;
+          width: 15px;
+          }
+          @include mq($from: desktop) { 
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+          }
+    }
+  }
+  
+  /* Hide the browser's default radio button */
+  .label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0!important;
+  }
+  
+  .checkmark{
+      &::before{
+          background-color: $eyYellow;
+      }
+  }
+  .content {
+    overflow-x: hidden;
+    flex: 1;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    overflow-y: auto;
+    transform: translate3d(0, 0, 0);
+     display: block;
+     overflow-x: hidden;
+     height: 100%;
+    -webkit-overflow-scrolling: touch;
+   
+    .page {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      
+      > div {
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        padding: 1em;
+      }
+    }
+    $duration: 1s;
+    .scrolled {
+      transition: transform $duration ease;
+      transform: translate3d(0, 0, 0);
+      &.ng-enter {
+        transform: translate3d(100%, 0, 0);
+      }
+      &.ng-enter-active {
+        transform: translate3d(0, 0, 0);
+      }
+      &.ng-leave {
+        transform: translate3d(0, 0, 0);
+      }
+      &.ng-leave-active {
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+    .modal {
+      transition: opacity $duration ease, transform $duration ease;
+      opacity: 1;
+      &.ng-enter {
+        opacity: 0;
+        transform: scale(0.95) translate3d(0, 0.5em, 0);
+      }
+      &.ng-enter-active {
+        opacity: 1;
+        transform: scale(1) translate3d(0, 0, 0);
+      }
+      &.ng-leave {
+       opacity: 1;
+      }
+      &.ng-leave-active {
+       opacity: 0;
+      }
+    }
+    .backward {
+      .scrolled {
+        &.ng-leave {
+          transform: translate3d(0, 0, 0);
+        }
+        &.ng-leave-active {
+          transform: translate3d(100%, 0, 0);
+        }
+        &.ng-enter {
+          transform: translate3d(-100%, 0, 0);
+        }
+        &.ng-enter-active {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .modal {
+        transition: opacity $duration ease, transform $duration ease;
+        opacity: 1;
+        &.ng-enter {
+          opacity: 0;
+          transform: scale(1) translate3d(0, 0, 0);
+        }
+        &.ng-enter-active {
+          opacity: 1;
+          transform: scale(1) translate3d(0, 0, 0);
+        }         
+        &.ng-leave {
+          opacity: 1;
+          transform: scale(1) translate3d(0, 0, 0);
+        }
+        &.ng-leave-active {
+          opacity: 0;
+          transform: scale(0.95) translate3d(0, 0.5em, 0);
+        }
+      }
+    }
+  }
+  .validate-btn{
+      font-family: EYInterstate-Regular;
+      height: 33px;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 5px;
+    min-width: 0;
+    border-radius: 1px;
+    border: 1px solid #707070;
+  }
+  .btn-cal{
+    width: 35px;
+    height: 35px;
+    padding: 0!important;
+    min-width: 0;
+    position: relative!important;
+    margin-left: 5px!important;
+    border: 1px solid #707070!important;
+    &:after {
+        content: '';
+        background-image: url(https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/calendar.png);
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        background-repeat: no-repeat;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        background-size: 90%;
+    }
+  }
+  .btn-upload {
+    width: 25%;
+    height: 48px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    &-text {
+        display: block;
+        width: 26%;
+        cursor: pointer;
+        background: $eyOffBlack;
+        border-radius: 8px;
+        font-size: 20px;        
+        padding: 10px 55px;
+        cursor: pointer;
+        color: $eyYellow;
+        font-family: EYInterstate-Light;
+    }
+}
+.btn-submitJob{
+    background-color: $eyOffBlack;
+    color: $eyOffWhite;
+    border: 1px solid #707070;
+}
+#s4-bodyContainer{
+    padding-bottom: 0!important;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    .ey-logo{
+        padding: 15px;
+        &-anchor{
+            width: 50px;
+            height: 100%;
+            display: inline-block;
+        }
+        &-img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+.assets{
+    footer{
+        position: relative;
+        width: 100%;
+        height: 71px;
+        .ey-logo{
+            padding: 15px;
+            position: absolute;
+            right: 20px;
+            &-anchor{
+                width: 50px;
+                height: 100%;
+                display: inline-block;
+            }
+            &-img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+.btn-submitJob {
+    height: 46px;
+    font-size: 18px;
+    border: 0;
+    margin-top: 12px;
+    &:hover{
+        background: $eyOffBlack;
+    }
+}
+.csg-service-block{
+    padding: 0 80px;
+    color: $eyOffWhite;
+    font-size: 26px;
+}
+.modal-popUp{
+  position: fixed;
+  top: 50%;
+  
+  transform: translate(-50%, -50%);
+  border: 0;
+ width: 100%;
+ left: 50%;
+  background-color: $eyOffBlack;
+  color: $eyOffWhite;
+  padding: 25px;
+  font-size: 16px;
+  
+  @include mq($from: tablet) { 
+    left: 55%;
+    width: 44%;
+    font-size: 22px; 
+  }
+}
+.modal-footer{
+  border-top: 0!important;
+  text-align: left!important;
+  font-size: 16px;
+}
+.modal-body:before {
+  content: '';
+  width: 20%;
+  height: 5px;
+  background-color: $eyYellow;
+  display: block;
+  margin-bottom: 21px;
+  
+}
+.btn-pop-up {
+  background: none;
+  min-width: 0;
+  padding: 5px 13px;
+  font-size: 15px;
+  border: 1px solid $eyYellow;
+  font-weight: 600;
+  margin-right: 10px;
+  &:hover{
+    background-color: $eyOffWhite;
+    color: $eyOffBlack;
+  }
+}
+.csg-service-close-btn{
+  font-size: 20px;
+  color: $eyOffWhite;
+  display: block;
+  text-align: right;
+}

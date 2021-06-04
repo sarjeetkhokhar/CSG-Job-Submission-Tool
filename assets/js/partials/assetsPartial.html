@@ -1,0 +1,345 @@
+<div class="csg-asset-wrapper" ng-class="{assets: assetPanel}" ng-controller="csgAssetsCtrl">
+    <div class="csg-service-innerWrapper">
+        <div class="csg-breadcrumbs" ng-show="reviewScreenOpen">
+            <ul class="csg-breadcrumbs-ul">
+                <li class="csg-breadcrumbs-list">
+                    <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home" class="csg-breadcrumbs-list-clickableAnchor">Home</a>
+                </li>            
+               <li class="csg-breadcrumbs-list">
+                   Review
+                </li>
+            </ul>
+            </div>
+            <div class="csg-breadcrumbs" ng-hide="reviewScreenOpen">
+                <ul class="csg-breadcrumbs-ul">
+                    <li class="csg-breadcrumbs-list">
+                        <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home" class="csg-breadcrumbs-list-clickableAnchor">Home</a>
+                    </li>
+                    <li class="csg-breadcrumbs-list">
+                        <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home/services" class="csg-breadcrumbs-list-clickableAnchor">Services</a>
+                    </li>
+                    <li class="csg-breadcrumbs-list">
+                        <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home/services/{{prevPage}}" class="csg-breadcrumbs-list-clickableAnchor">{{prevPage}}</a>
+                    </li>
+                   
+                    <li class="csg-breadcrumbs-list">
+                        {{pageName}}
+                    </li>
+                </ul>
+                </div>
+        <h2 class="heading-bar">{{pageName}}</h2>
+        
+    <div class="csg-services-container" ng-hide="reviewScreenOpen">
+        <div class="csg-services-topWrapper">
+            <div class="csg-services-assets">
+                <h3 class="csg-services-about">Which Assets?</h3>
+            </div>
+            <div class="csg-services-products">
+                <ul class="csg-btn-lists">
+                    <li class="csg-btn-lists-listItem" ng-repeat="products in productsAvailable">
+                        <a href="#" class="csg-btn-lists-listItem-anchor" ng-click="selectAssets($event,products)">
+                            {{products.Title}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+    <div class="csg-form-wrapper" ng-show="assetPanel">
+        <h4 class="csg-form-Title">You've selected:</h4>
+        <div class="csg-form-selectedAssets">
+            <ul class="csg-form-selectedAssets">
+                <li class="csg-form-selectedAssets-listItem" ng-repeat="item in assets">
+                    <div class="topWrapper">
+                        <div class="csg-form-selectedAssets-leftSection">
+                            <span class="csg-form-selectedAssets-listItem-value">{{item.Title}}</span>
+                            <div class="radio-wrapper" ng-if="item.Type.length > 0">
+                                <span class="csg-form-selectedAssets-title">Select From:</span>
+                                <fieldset ng-repeat="type in item.Type">
+                                    <label for="{{type}}-{{$index}}"  id="{{type}}--{{$index}}" class="label-container" ng-class="{'checkmark': $index == 0}">
+                                    <input type="radio" id="{{type}}-{{$index}}" name="{{type}}-{{$index}}" ng-selected="{{$index == 0}}" ng-value="type" ng-click="selectRadio($index,type,item.ID)">
+                                    {{type}}</label>
+                                </fieldset>
+                            </div>
+                           
+                        </div>
+                        <div class="csg-form-selectedAssets-rightSection">
+                            <span class="csg-form-selectedAssets-listItem-edit" ng-click = "back()" ng-show="reviewScreenOpen">edit</span><span class="csg-form-selectedAssets-listItem-delete" ng-click="deleteAssets(item.ID)" ng-hide="reviewScreenOpen">delete</span>
+                        </div>
+                    </div>      
+                             
+                        
+                   
+                   
+                </li>
+            </ul>
+
+        </div>
+        <div class="csg-form-innerWrapper" ng-hide="reviewScreenOpen">
+            <ng-form name="csgForm" novalidate>
+                
+            <div class="csg-form-first-step">
+                <h4 class="csg-form-step-heading">Step 1 - Job information</h4>
+                <div class="csg-form-first-step-wrapper">
+                    <fieldset class="csg-form-input">
+                        <label for="requestor">Requestor*</label>
+                        <input type="email" id="Requestor" class="disableInput" name="emailID" ng-model="formData.requestor" readonly class="csg-form-input-email">
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label for="altContact">Alternative Contact*</label>
+                        <div class="csg-form-input-group">
+                            <input type="text" id="altContact" name="altContact"  ng-model="formData.altContact" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
+                        <span style="color:Red" ng-show="hasError('altContact', 'required') "> Required! </span>
+
+                        <span style="color:Red" ng-show="csgForm.altContact.$dirty&&csgForm.altContact.$error.pattern">Please Enter Valid Email</span>
+                        </div>
+                        
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label for="fname">Engagement code*</label> 
+                        <div class="input-wrapper">
+                        <p class="csg-form-note">
+                            Type the Entire code and click validate
+                        </p>
+                        <input type="text" id="ecode" name="engagementCode" ng-model="formData.engagementCode" required>
+                        <button type="button" ng-click="validate()" class="validate-btn">Validate</button>
+                        <span style="color:Red" ng-show="hasError('engagementCode', 'required') " class="error"> Required! </span>
+                        </div>
+                                               
+                        
+                    
+                        
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label for="clientName">Client or Project Name*</label>
+                        <div class="csg-form-input-group">      
+                        <input type="text" id="clientName" name="clientName" ng-model="formData.Title" required>
+                        <span style="color:Red" ng-show="hasError('clientName', 'required') "> Required! </span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="csg-form-input extraCol">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority" size="4" ng-model="formData.priority" ng-options="x for x in priorities">
+                          </select>
+                          <div class="text-wrapper">
+                            <p class="csg-form-note">Enter a reason for your 'High' job priority</p>
+                            <textarea id="priority-data" name="priority-data" ng-model="formData.priorityReason"> 
+
+                            </textarea>
+
+                          </div>
+                        
+                        
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label for="projectPurpose">Project Purpose*
+                            <p class="csg-form-note">
+                                <strong> PLEASE READ:</strong><br/>
+                                Sensitive and restricted data (SRD)
+                            </p>
+                        </label>
+                        
+                          <div class="csg-form-input-group">    
+                            <select id="projectPurpose" name="projectPurpose" ng-model="formData.projectPurpose" ng-options="x for x in purposes" size="3" required>
+                            </select>                        
+                            <span style="color:Red" ng-show="hasError('projectPurpose', 'required') "> Required! </span>
+                        </div>
+                    </fieldset>
+              </div>
+            </div>
+            <div class="csg-form-second-step">
+                <h4 class="csg-form-step-heading">Step 2 - Job details</h4>
+                <div class="csg-form-second-step-wrapper">
+                    <fieldset class="csg-form-input">
+                        <label for="requestedOn">requested On*</label>
+                        <p class="input-group">
+                            <input 
+                                  type="text" 
+                                  class="form-control"
+                                  ng-model="formData.requestedOn"                                 
+                                   readonly/>
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-default btn-cal" ng-click="opened2 = !opened2"  ng-disabled="true">
+                              </button>
+                            </span>
+                          </p>
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label for="documentPass">Document Password:
+                            <p class="csg-form-note">
+                                If file(s) is password-protected, please provide password:
+                            </p>
+                        </label>
+                        <input type="text" id="documentPass" name="documentPass" ng-model="formData.documentPassword">
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label for="dueBy">Due by*</label>
+                        <p class="input-group">
+                            <input
+                                  type="text" 
+                                  name="dueBy"
+                                  class="form-control" 
+                                  min="minDate"
+                                  uib-datepicker-popup="M!/d!/yyyy 5:00 'PM'"
+                                  ng-model-options="{timezone: 'utc'}"
+                                  datepicker-options="dateOptions"
+                                  ng-model="formData.dueBy" 
+                                  is-open="popup2.opened" required/>
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-default btn-cal" ng-click="open2()">
+                               
+                              </button>
+                            </span>
+                            <span style="color:Red" ng-show="hasError('dueBy', 'required') "> Required! </span>
+                          </p>
+                          
+                    </fieldset>
+                    
+                    <fieldset class="csg-form-input">
+                        <label for="printingReq">Printing Requirements</label>
+                        <select id="printingReq" size="3" name="printingReq" ng-model="formData.printingRequirements" ng-options="x for x in printingRequirements">                            
+                        </select>
+                       
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label for="files">How are you submitting <br/> your files?</label>
+                        <select id="files" class="csg-form-files" name="files" size="3" ng-model="formData.filesTypeSubmitted" ng-options="x for x in filesTypeSubmitted" >
+                            
+                          </select>
+                       
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label for="fileUpload number">How many files are you uploading?*</label>
+                        <input type="number" ng-model="formData.totalFiles" required/>                     
+                        </fieldset>
+                    </div>
+                    <div class="csg-form-uploader">
+                        <div class="csg-filepicker">
+                            <!-- <input id="filePicker" type = "text" ng-model="newItem"/> -->
+                            <input id="filePicker" class="btn-upload" type = "file" name="newItem" select="newItem" file-model = "newItem" multiple/>
+                            <!-- <a ng-click = "uploadFile(newItem)">upload me</a> -->
+                            <span class="btn-upload-text">Upload from Computer</span> 
+                        </div>
+                        <div class="csg-form-uploadSection">
+
+                            <h5 ng-show="docUploaded">File Uploaded:</h5>
+                           <div id="successDiv"></div>
+                            <!-- <ul>
+                                <li ng-repeat="upload in displayUploadedNames">                                    
+                                        <span>{{upload}}</span>
+                                        <span>{{userName}}</span>
+                                        <span>date and time({{new Date()}})</span>
+                                   <span class="delete">delete</span>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+            </div>
+            <div class="csg-form-third-step">
+                <h4 class="csg-form-step-heading">Step 3 - Special Instructions</h4>
+                <div class="csg-form-third-step-wrapper">
+                    <fieldset class="csg-form-input">
+                        <label for="special-Instruction">
+                            Special Instructions
+                            <p class="csg-form-note">Character count is limited to 1000. If your instructions exceed this, please save as a Word document and attach to request. </p></label>
+                        <textarea rows = "5" ng-trim="false" maxlength="1000" name = "special-Instruction" ng-model="formData.specialInstructions">
+                            
+                         </textarea>
+                         
+                    </fieldset>
+                    <fieldset class="csg-form-input">
+                        <label></label>
+                        <span class="csg-form-characterCount">{{1000 - formData.specialInstructions.length}} character count</span>
+                         
+                    </fieldset>
+                    
+                   </div>
+            
+            </div>
+            <div class="csg-form-button-container">
+                <div class="csg-form-button-holder">
+                    <button type="button" ng-click=jobReview($event)>Review</button>
+                </div>
+                <div class="csg-form-button-holder">                   
+                    <button type="button"  ng-click=jobCancel()>Cancel</button>
+                </div>                
+            </div>
+            </ng-form>
+        </div>
+        <div class="csg-form-reviewWrapper" ng-show="reviewScreenOpen">
+            <div class="csg-form-tableFormat">
+                <table class="csg-form-table">
+                    <tr class="csg-form-row">
+                        <td>Requestor</td><td>{{formData.requestor}}</td><td>Due By</td><td>{{formData.dueBy}}</td>
+                    </tr>
+                    <tr>
+                        <td>Alternative Contact</td><td>{{formData.altContact}}</td><td>Print requirements</td><td>{{formData.printingRequirements}}</td>
+                    </tr>
+                    <tr>
+                        <td>Engagement Code</td><td>{{formData.engagementCode}}</td><td>Requested On</td><td>{{formData.requestedOn}}</td>
+                    </tr>
+                    <tr>
+                        <td>Client/Project Name</td><td>{{formData.Title}}</td><td>Document Password</td><td>{{formData.documentPassword}}</td>
+                    </tr>
+                    <tr>
+                        <td>Priority</td><td>{{formData.priority}}</td><td>How many files are you uploading?</td><td>{{formData.totalFiles}}</td>
+                    </tr>
+                    <tr>
+                        <td>Project Purpose</td><td>{{formData.projectPurpose}}</td><td>How are you submitting
+                            your files?</td><td>{{formData.filesTypeSubmitted}}</td>
+                    </tr>
+                    <tr><td colspan="1">Files Uploaded</td><td colspan="3"><span ng-repeat="name in displayUploadedNames">{{name}}</span></td></tr>
+                    <tr><td colspan="1">special Instructions</td><td colspan="3">{{formData.specialInstructions}}</td></tr>
+                </table>
+            </div>
+            
+        </div>
+        <div class="csg-form-submitBtn" ng-show="reviewScreenOpen">
+            <button type="button" ng-click="jobPosted($event)" class="btn-submitJob">
+                Submit Order
+            </button>
+        </div>
+    </div>
+    <div class="modal-popUp" ng-show="openErrorPopUp">
+        <div class="modal-body">
+            These are errors below:
+            <ul>
+                <li ng-repeat="x in error">
+                    {{x}}
+                </li>
+            </ul>
+        </div>
+       
+        <div class="modal-footer">
+            <button class="btn-pop-up" type="button" ng-click="cancel()">OK</button>
+        </div>
+       
+    </div>
+    <div class="modal-popUp" ng-show="openPopUp">
+        <div class="modal-body" id="modal-body">
+            Are you sure you want to navigate away, your request will be lost/cancelled?
+        </div>
+        <div class="modal-footer">
+            <button class="btn-pop-up" type="button" ng-click="ok()">YES</button>
+            <button class="btn-pop-up" type="button" ng-click="cancel()">NO</button>
+        </div>
+    </div>
+    <!-- <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">           
+        </div>
+        <div class="modal-body" id="modal-body">
+            Are you sure you want to navigate away, your request will be lost/cancelled?
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script> -->
+    <footer>
+        <div class="ey-logo">
+            <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home" class="ey-logo-anchor"><img src="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/SiteAssets/job-submission-tool/assets/img/Logo.png" alt="logo" class="ey-logo-img"/></a>
+        </div>
+    </footer>
+    </div>
+</div>

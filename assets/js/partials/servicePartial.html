@@ -1,0 +1,34 @@
+<div class="csg-service-wrapper page" ng-controller="csgServicesCtrl">
+   <!--  <breadcrumbs></breadcrumbs> -->
+  
+   <div class="csg-service-innerWrapper">
+    <div class="csg-breadcrumbs">
+        <ul class="csg-breadcrumbs-ul">
+            <li class="csg-breadcrumbs-list">
+                <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home" class="csg-breadcrumbs-list-clickableAnchor">Home</a>
+            </li>
+            <li class="csg-breadcrumbs-list">
+                Services
+            </li>
+        </ul>
+        </div>
+    <h2 class="heading-bar">Services</h2>   
+    <div class="csg-service-listWrapper">
+        <ul ng-repeat="list in servicesData">
+            <li class="csg-service-listWrapper-listItem">
+                <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home/services/{{list.Title}}" class="csg-service-anchor">
+                <span class="csg-service-listWrapper-listItem-originalText">{{list.Title}}</span>
+                <span class="csg-service-listWrapper-listItem-rollOverText">{{list.Rollover_x002d_Text}}</span>
+                </a>
+            </li>
+        </ul>
+    </div> 
+    
+   </div>
+   <footer>
+    <div class="ey-logo">
+        <a href="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/UK/SitePages/Creative-Workflow.aspx/home" class="ey-logo-anchor"><img src="https://eygb.sharepoint.com/sites/CreativeWorkflow/Test/SiteAssets/job-submission-tool/assets/img/Logo.png" alt="logo" class="ey-logo-img"/></a>
+    </div>
+</footer>
+    
+</div>

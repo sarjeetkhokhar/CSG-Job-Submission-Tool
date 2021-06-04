@@ -1,0 +1,72 @@
+/* innvovation initiatives styling
+========================================================================== */
+
+#waveMainWrapper {
+
+.wave__section--initiatives {
+
+	.wave__page-list {
+		margin: 6% 0 10%;
+	}
+
+	.wave__page-listitem {
+		@include mq($from: tablet) { 
+		    width: 22.5%;
+		    margin-left: 2.5%;
+		}
+	    
+	    &:first-child {
+		    margin-left: 0;
+		}
+
+		.wave__page-overlayed-box {
+			background: #eaeaea;
+			overflow: hidden;
+			.wave__page-overlayed-content {
+				width: 100%;
+			    margin: 0px auto;
+			    overflow: hidden;
+			    color: #FFFFFF;
+			    height: auto;
+			    line-height: 1em;
+			    position: relative;
+			    @include mq($from: tablet) { 
+			    	position: absolute;
+				    bottom: -13%;
+				    left: 0;
+				    right: 0;
+				    height:0;
+				    transition: 0.5s all;
+			    }
+			}
+			&:hover {
+				.wave__page-overlayed-content {
+					height: auto;
+					bottom: 1%;
+					padding: 5%;
+				}
+			}
+
+		}
+	}
+
+	.wave__page-overlayed-title {
+    	width: 100%;
+		color: $eyOffBlack;
+		@include fontSize(24px);
+		text-align: center;
+		position: relative;
+		margin-top: -20px;
+    	margin-bottom: 20px;
+
+		@include mq($from: tablet) { 
+			position: absolute;
+	    	bottom: 1%;
+	    }
+	}
+
+
+}
+
+}
+

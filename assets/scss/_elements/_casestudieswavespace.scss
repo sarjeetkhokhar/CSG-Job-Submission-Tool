@@ -1,0 +1,143 @@
+/* case studies wavespace styling
+========================================================================== */
+
+#waveMainWrapper {
+
+.wave__section--case {
+
+	.wave__sub-section--content-area {
+		margin-bottom: 60px;
+	}
+
+	.wave__sub-section--cta-cont {
+		margin-top: 10%;
+	}
+
+	.wave__page-list {
+		margin-bottom: 60px;
+	}
+
+	.wave__quote-text {
+		padding-bottom: 10px;
+		@include mq($from: tablet) { 
+			padding-bottom: 50px;
+		}
+	}
+
+	.wave__quote-overlay {
+		width: 100%;
+		max-width: 700px;
+		background: rgba(0, 0, 0, 0.8);
+		position: relative;
+		padding: 3%;
+		-webkit-transition: all 0.5s ease-out;
+		transition: all 0.5s ease-out;
+		
+		@include mq($from: tablet) { 
+			width: 75%;
+			position: absolute;	
+			top:7%;
+			right: 7%;
+			z-index:10;
+		}
+
+		.wave__sub-section--content-style {
+			color: $white;
+			font-family: EYInterstate-Regular;
+			padding-right: 40px;
+			@include mq($until: tablet) { 
+				@include fontSize(18px);
+			}
+		}
+	}
+
+	.wave__page-overlay {
+		width: 100%;
+		max-width: 700px;
+		background: rgba(0, 0, 0, 0.8);
+		position: relative;
+		padding: 3%;
+		-webkit-transition: all 0.5s ease-out;
+		transition: all 0.5s ease-out;
+		
+		@include mq($from: tablet) { 
+			width: 80%;
+			position: absolute;	
+			top:0;
+			right: 27%;
+			z-index:10;
+		}
+
+		.wave__sub-section--content-style {
+			color: $white;
+			font-family: EYInterstate-Regular;
+			padding-right: 40px;
+		}
+
+	}
+
+
+	.wave__quote-overlay-close {
+		width: 30px;
+		height: 30px;
+		background: url("https://sites.ey.com/sites/wavespace-dublin/SiteAssets/wavespace-site/assets/img/wave__close-icon.png") 0 0 no-repeat;
+		text-indent: -9999px;
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+	}
+
+	.wave__sub-section--case-study-header {
+		width: 100%;
+		color: #2E2E38;
+	    font-family: EYInterstate-Light;
+	    @include fontSize(24px);
+	    line-height: 1.4em;
+	    padding: 20px 0;
+	    @include mq($from: tablet) { 
+	    	@include fontSize(30px);
+	    	padding: 7% 20% 4%;
+	    }
+	}
+
+	.wave__faq-callout {
+		@include mq($from: tablet) { 
+		    top: 7.5%;
+		}
+	}
+
+	.wave__case-study--content-table {
+		width: 100%;
+		margin-bottom: 30px;
+
+		tr {
+			width: 100%;
+			background: $white;
+			&:nth-child(odd) {
+				background: #e0e0e1;
+			}
+		}
+
+		th {
+			width: 50%;
+			background: $white;
+			font-family: EYInterstate-Regular;
+	    	@include fontSize(18px);
+			padding: 10px 10px 25px;
+			word-wrap:break-word;
+		}
+
+		td {
+			width: 50%;
+			font-family: EYInterstate-Light;
+	    	@include fontSize(18px);
+	    	padding: 7px 10px;
+			word-wrap:break-word;
+		}
+	}
+
+}
+
+}

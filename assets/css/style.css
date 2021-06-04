@@ -1,0 +1,1964 @@
+/**
+ * EY - CSG- Job Submission Tool - Custom styles
+ *
+ * @author: EY
+ * @version v0.0.1
+ */
+/*------------------------------------*\
+   # normalize - H5BP
+\*------------------------------------*/
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-default .odometer-digit {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  visibility: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
+  display: block;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
+  display: block;
+  -webkit-backface-visibility: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value, .odometer.odometer-theme-default .odometer-digit .odometer-value {
+  display: block;
+  -webkit-transform: translateZ(0);
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value, .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute;
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -ms-transition: -ms-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -ms-transition: -ms-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.1em;
+}
+
+.odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value {
+  text-align: center;
+}
+
+/* Helpers
+   ========================================================================== */
+*, ::after, ::before {
+  box-sizing: border-box !important;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes waitX {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes waitY {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* Variables definitions
+   ========================================================================== */
+/* Mixins
+   ========================================================================== */
+#pageContentTitle, #suiteBarTop, #titlerow, .ms-webpart-chrome-title, .ms-SPZoneLabel {
+  display: none;
+}
+
+.contentwrapper {
+  margin: 0;
+  min-width: 100%;
+}
+
+#contentBox {
+  margin: 0;
+  padding: 0;
+  display: block;
+  min-width: 0;
+}
+
+#ms-help *, #s4-ribbonrow *, #s4-ribbonrow :after, #s4-ribbonrow :before, .ms-MenuUIPopupBody, .ms-MenuUIPopupBody *, .ms-MenuUIPopupBody :after, .ms-MenuUIPopupBody :before, .ms-MenuUIPopupBody:after, .ms-MenuUIPopupBody:before, .ms-ToolPaneOuter, .ms-ToolPaneOuter *, .ms-ToolPaneOuter :after, .ms-ToolPaneOuter :before, .ms-ToolPaneOuter:after, .ms-ToolPaneOuter:before, .ms-dlgFrameContainer > div, .ms-dlgFrameContainer > div:after, .ms-dlgFrameContainer > div:before, .ms-dlgFrameContainer > div > div, .ms-dlgFrameContainer > div > div:after, .ms-dlgFrameContainer > div > div:before, [class*=ms-core-menu], [class*=ms-dlg], [class*=ms-dlg] *, [class*=ms-dlg] :after, [class*=ms-dlg] :before, [class*=ms-dlg]:after, [class*=ms-dlg]:before, [class*=ms-cui], [class*=ms-cui] *, [class*=ms-cui] :after, [class*=ms-cui] :before, [class*=ms-cui]:after, [class*=ms-cui]:before, [class*=ms-webpart] * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#suiteBar, .ms-belltown-anonShow {
+  display: none !important;
+}
+
+.ms-rte-layoutszone-inner-editable, .ms-rtestate-write {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#disclaimerDiv {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+#s4-workspace {
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ms-rtestate-field {
+  padding: 0 !important;
+}
+
+.ms-rteflags-2.ms-rtestate-field {
+  font-size: 0;
+}
+
+#ms-belltown-table {
+  padding: 0;
+}
+
+.ms-rte-layoutszone-outer {
+  background-color: #f7f3f7;
+}
+
+#eymain p {
+  display: block;
+}
+
+.blur-up {
+  -webkit-filter: blur(15px);
+  opacity: 0.2;
+  transform: scale(1.2);
+  filter: blur(15px);
+  transition: filter 0.5s linear, opacity 0.3s ease-in-out, transform 0.2s cubic-bezier(0, 0, 0.32, 1);
+}
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1);
+}
+
+#disclaimerDiv {
+  display: none !important;
+}
+
+.ms-webpartzone-cell {
+  margin-bottom: 0 !important;
+}
+
+.ms-rte-layoutszone-inner {
+  border: 0 !important;
+}
+
+.ms-SPZone > .s4-wpActive, .ms-rtestate-write > .ms-rte-wpbox > div > .s4-wpActive {
+  border: 0px none;
+  padding: 0px;
+  border-collapse: separate;
+}
+
+.ms-rte-layoutszone-inner {
+  margin: 0px !important;
+}
+
+#s4-titlerow {
+  display: none !important;
+}
+
+#sideNavBox {
+  display: none;
+}
+
+#s4-ribbonrow {
+  display: none;
+}
+
+#contentRow {
+  padding: 0 !important;
+}
+
+.ms-webpartPage-root {
+  border-spacing: 0 !important;
+}
+
+#titleAreaBox, #s4-titlerow, #suiteBarTop, #RibbonContainer, #globalNavBox, #s4-ribbonrow {
+  display: none !important;
+}
+
+/* Base styling
+========================================================================== */
+.heading-bar {
+  font-size: 31px;
+  font-family: EYInterstate-Light;
+  color: #F6F6FA !important;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+@media (min-width: 46.25em) {
+  .heading-bar {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 61.25em) {
+  .heading-bar {
+    font-size: 55px;
+  }
+}
+.heading-bar::before {
+  content: "";
+  width: 26%;
+  height: 4px;
+  background-color: #FFE600;
+  display: block;
+}
+@media (min-width: 46.25em) {
+  .heading-bar::before {
+    font-size: 40px;
+    width: 28%;
+  }
+}
+@media (min-width: 61.25em) {
+  .heading-bar::before {
+    font-size: 55px;
+    width: 140px;
+  }
+}
+
+.csg-breadcrumbs {
+  margin-bottom: 15px;
+}
+@media (min-width: 46.25em) {
+  .csg-breadcrumbs {
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-breadcrumbs {
+    margin-bottom: 35px;
+  }
+}
+.csg-breadcrumbs-ul {
+  padding: 0;
+}
+.csg-breadcrumbs-ul .csg-breadcrumbs-list {
+  list-style: none;
+  display: inline-block;
+  color: #F6F6FA;
+}
+.csg-breadcrumbs-ul .csg-breadcrumbs-list-clickableAnchor {
+  color: #F6F6FA;
+  position: relative;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.csg-breadcrumbs-ul .csg-breadcrumbs-list-clickableAnchor::after {
+  content: ">";
+  position: absolute;
+  right: -14px;
+}
+
+.csg-btn-lists {
+  display: flex;
+  flex-wrap: wrap;
+  /*  justify-content: space-evenly; */
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 46.25em) {
+  .csg-btn-lists {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-btn-lists {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+}
+.csg-btn-lists-listItem {
+  list-style: none;
+  /* flex-basis: 18%; */
+  /* height: 30px; */
+  margin-bottom: 10px;
+}
+.csg-btn-lists-listItem-anchor {
+  color: #F6F6FA !important;
+  font-size: 19px;
+  display: inline-block;
+  background-color: #2E2E38;
+  padding: 8px 30px;
+  text-decoration: none !important;
+  /*  @include mq($from: desktop) { 
+    margin-right: 24px;
+
+  } */
+}
+@media (min-width: 46.25em) {
+  .csg-btn-lists-listItem-anchor {
+    margin-right: 8px;
+  }
+}
+.csg-btn-lists-listItem-anchor:hover {
+  color: #FFE600 !important;
+}
+
+.csg-services-container {
+  margin: 15px 0;
+}
+@media (min-width: 46.25em) {
+  .csg-services-container {
+    margin: 35px 0;
+  }
+}
+.csg-services-topWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.csg-services-assets {
+  flex-basis: 100%;
+}
+@media (min-width: 46.25em) {
+  .csg-services-assets {
+    flex-basis: 15%;
+  }
+}
+.csg-services-products {
+  display: flex;
+  flex-basis: 100%;
+}
+@media (min-width: 61.25em) {
+  .csg-services-products {
+    flex-basis: 83%;
+  }
+}
+.csg-services-about {
+  font-size: 22px;
+  color: #F6F6FA;
+  font-family: EYInterstate-Light;
+  margin: 0;
+  display: flex;
+}
+@media (min-width: 46.25em) {
+  .csg-services-about {
+    font-size: 30px;
+    display: inline-flex;
+  }
+}
+
+.label-container {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #F6F6FA;
+  font-family: EYInterstate-Light;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 500;
+}
+@media (min-width: 46.25em) {
+  .label-container {
+    font-size: 15px;
+    padding-left: 24px;
+  }
+}
+@media (min-width: 61.25em) {
+  .label-container {
+    font-size: 20px;
+    padding-left: 28px;
+  }
+}
+.label-container:before {
+  content: "";
+  width: 12px;
+  background: white;
+  height: 12px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  margin-top: 2px;
+  border: 1px solid #707070;
+}
+@media (min-width: 46.25em) {
+  .label-container:before {
+    font-size: 15px;
+    height: 15px;
+    width: 15px;
+  }
+}
+@media (min-width: 61.25em) {
+  .label-container:before {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Hide the browser's default radio button */
+.label-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0 !important;
+}
+
+.checkmark::before {
+  background-color: #FFE600;
+}
+
+.content {
+  overflow-x: hidden;
+  flex: 1;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  overflow-y: auto;
+  transform: translate3d(0, 0, 0);
+  display: block;
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.content .page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.content .page > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+}
+.content .scrolled {
+  transition: transform 1s ease;
+  transform: translate3d(0, 0, 0);
+}
+.content .scrolled.ng-enter {
+  transform: translate3d(100%, 0, 0);
+}
+.content .scrolled.ng-enter-active {
+  transform: translate3d(0, 0, 0);
+}
+.content .scrolled.ng-leave {
+  transform: translate3d(0, 0, 0);
+}
+.content .scrolled.ng-leave-active {
+  transform: translate3d(-100%, 0, 0);
+}
+.content .modal {
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+}
+.content .modal.ng-enter {
+  opacity: 0;
+  transform: scale(0.95) translate3d(0, 0.5em, 0);
+}
+.content .modal.ng-enter-active {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+.content .modal.ng-leave {
+  opacity: 1;
+}
+.content .modal.ng-leave-active {
+  opacity: 0;
+}
+.content .backward .scrolled.ng-leave {
+  transform: translate3d(0, 0, 0);
+}
+.content .backward .scrolled.ng-leave-active {
+  transform: translate3d(100%, 0, 0);
+}
+.content .backward .scrolled.ng-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+.content .backward .scrolled.ng-enter-active {
+  transform: translate3d(0, 0, 0);
+}
+.content .backward .modal {
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+}
+.content .backward .modal.ng-enter {
+  opacity: 0;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+.content .backward .modal.ng-enter-active {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+.content .backward .modal.ng-leave {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+.content .backward .modal.ng-leave-active {
+  opacity: 0;
+  transform: scale(0.95) translate3d(0, 0.5em, 0);
+}
+
+.validate-btn {
+  font-family: EYInterstate-Regular;
+  height: 33px;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 5px;
+  min-width: 0;
+  border-radius: 1px;
+  border: 1px solid #707070;
+}
+
+.btn-cal {
+  width: 35px;
+  height: 35px;
+  padding: 0 !important;
+  min-width: 0;
+  position: relative !important;
+  margin-left: 5px !important;
+  border: 1px solid #707070 !important;
+}
+.btn-cal:after {
+  content: "";
+  background-image: url(https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/calendar.png);
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  background-size: 90%;
+}
+
+.btn-upload {
+  width: 25%;
+  height: 48px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+.btn-upload-text {
+  display: block;
+  width: 26%;
+  cursor: pointer;
+  background: #2E2E38;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 10px 55px;
+  cursor: pointer;
+  color: #FFE600;
+  font-family: EYInterstate-Light;
+}
+
+.btn-submitJob {
+  background-color: #2E2E38;
+  color: #F6F6FA;
+  border: 1px solid #707070;
+}
+
+#s4-bodyContainer {
+  padding-bottom: 0 !important;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+footer .ey-logo {
+  padding: 15px;
+}
+footer .ey-logo-anchor {
+  width: 50px;
+  height: 100%;
+  display: inline-block;
+}
+footer .ey-logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.assets footer {
+  position: relative;
+  width: 100%;
+  height: 71px;
+}
+.assets footer .ey-logo {
+  padding: 15px;
+  position: absolute;
+  right: 20px;
+}
+.assets footer .ey-logo-anchor {
+  width: 50px;
+  height: 100%;
+  display: inline-block;
+}
+.assets footer .ey-logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-submitJob {
+  height: 46px;
+  font-size: 18px;
+  border: 0;
+  margin-top: 12px;
+}
+.btn-submitJob:hover {
+  background: #2E2E38;
+}
+
+.csg-service-block {
+  padding: 0 80px;
+  color: #F6F6FA;
+  font-size: 26px;
+}
+
+.modal-popUp {
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  width: 100%;
+  left: 50%;
+  background-color: #2E2E38;
+  color: #F6F6FA;
+  padding: 25px;
+  font-size: 16px;
+}
+@media (min-width: 46.25em) {
+  .modal-popUp {
+    left: 55%;
+    width: 44%;
+    font-size: 22px;
+  }
+}
+
+.modal-footer {
+  border-top: 0 !important;
+  text-align: left !important;
+  font-size: 16px;
+}
+
+.modal-body:before {
+  content: "";
+  width: 20%;
+  height: 5px;
+  background-color: #FFE600;
+  display: block;
+  margin-bottom: 21px;
+}
+
+.btn-pop-up {
+  background: none;
+  min-width: 0;
+  padding: 5px 13px;
+  font-size: 15px;
+  border: 1px solid #FFE600;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.btn-pop-up:hover {
+  background-color: #F6F6FA;
+  color: #2E2E38;
+}
+
+.csg-service-close-btn {
+  font-size: 20px;
+  color: #F6F6FA;
+  display: block;
+  text-align: right;
+}
+
+/* Typography
+   ========================================================================== */
+@font-face {
+  font-family: EYInterstate-Regular;
+  src: url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Regular.eot);
+  src: url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Regular.eot?#iefix) format("embedded-opentype"), url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Regular.woff) format("woff"), url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: EYInterstate-Light;
+  src: url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Light.eot);
+  src: url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Light.eot?#iefix) format("embedded-opentype"), url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Light.woff) format("woff"), url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: EYInterstate-Bold;
+  src: url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Bold.eot);
+  src: url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Bold.eot?#iefix) format("embedded-opentype"), url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Bold.woff) format("woff"), url(https://eygb.sharepoint.com/:f:/r/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/fonts/EYInterstate-Bold.ttf) format("truetype");
+}
+/* Buttons
+   ========================================================================== */
+#waveMainWrapper .wave__sub-section-btn {
+  width: auto;
+  background: #404040;
+  color: #FFFFFF;
+  font-family: EYInterstate-Light;
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding: 20px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: 2px solid #404040;
+}
+@media (min-width: 46.25em) {
+  #waveMainWrapper .wave__sub-section-btn {
+    min-width: 350px;
+  }
+}
+#waveMainWrapper .wave__sub-section-btn:hover {
+  color: #404040;
+  background: #FFFFFF;
+  text-decoration: none;
+}
+#waveMainWrapper .wave__sub-section-btn:hover:after {
+  transition: all 0.5s;
+}
+
+/* Home styling
+========================================================================== */
+#csg-container header {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  background-color: #2E2E38;
+}
+#csg-container header .btn-header {
+  color: #F6F6FA;
+  font-size: 16px;
+  font-family: EYInterstate-Light;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-right: 111px;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-image: url(https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/external-link.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 16px;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+@media (min-width: 46.25em) {
+  #csg-container header .btn-header {
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 19px;
+  }
+}
+#csg-container header .btn-header:hover {
+  text-decoration: none;
+  color: #FFE600;
+}
+#csg-container .csg-home-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/csg-banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+}
+#csg-container .csg-home-innerwrapper {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0 0 0 10px;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-home-innerwrapper {
+    padding: 0 0 0 4%;
+  }
+}
+@media (min-width: 61.25em) {
+  #csg-container .csg-home-innerwrapper {
+    padding: 0 0 0 10%;
+  }
+}
+#csg-container .csg-home-introLine {
+  color: #F6F6FA;
+  font-size: 16px;
+  font-family: EYInterstate-Light;
+}
+#csg-container .csg-home-introLine-Yellow {
+  color: #FFE600;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-home-introLine {
+    font-size: 20px;
+  }
+}
+#csg-container .csg-home-heading {
+  padding: 15px 0 20px 0;
+  color: #F6F6FA;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-home-heading {
+    padding: 15px 0 60px 0;
+  }
+}
+#csg-container .csg-home-heading-Top {
+  font-size: 44px;
+  font-family: EYInterstate-Regular;
+  display: block;
+  margin-top: 15px;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-home-heading-Top {
+    font-size: 60px;
+  }
+}
+@media (min-width: 61.25em) {
+  #csg-container .csg-home-heading-Top {
+    font-size: 70px;
+  }
+}
+#csg-container .csg-home-heading-Bottom {
+  font-size: 28px;
+  font-family: EYInterstate-Light;
+  display: block;
+  line-height: 36px;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-home-heading-Bottom {
+    font-size: 60px;
+  }
+}
+@media (min-width: 61.25em) {
+  #csg-container .csg-home-heading-Bottom {
+    font-size: 50px;
+  }
+}
+#csg-container .csg-home-btnWrapper {
+  width: 90px;
+  height: 90px;
+}
+#csg-container .csg-home-btnWrapper .btn-submit {
+  position: relative;
+}
+#csg-container .csg-home-btnWrapper .btn-submit-outerWrapper {
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/Btn_Submit_a_job.png");
+  display: block;
+  height: 66px;
+  width: 66px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-home-btnWrapper .btn-submit-outerWrapper {
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 61.25em) {
+  #csg-container .csg-home-btnWrapper .btn-submit-outerWrapper {
+    background-size: 100%;
+  }
+}
+#csg-container .csg-home-btnWrapper .btn-submit-outerCircle {
+  opacity: 0;
+  transform: rotate(-180deg);
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/Path 3.png");
+  background-repeat: no-repeat;
+  background-size: 98%;
+  display: block;
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  -ms-transition: -ms-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-home-btnWrapper .btn-submit-outerCircle {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media (min-width: 61.25em) {
+  #csg-container .csg-home-btnWrapper .btn-submit-outerCircle {
+    width: 90px;
+    height: 90px;
+  }
+}
+#csg-container .csg-home-btnWrapper .btn-submit-outerCircle .btn-submit-ellipse {
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/Ellipse 1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  display: block;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: -webkit-opacity 0.8s ease-in-out;
+  -ms-transition: -ms-opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
+}
+#csg-container .csg-home-btnWrapper .btn-submit-text {
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/Submit a job.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  display: block;
+  width: 175px;
+  display: block;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 90px;
+  -webkit-transition: -webkit-opacity 0.8s ease-in-out;
+  -ms-transition: -ms-opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
+}
+#csg-container .csg-home-btnWrapper .btn-submit:hover .btn-submit-outerCircle {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+#csg-container .csg-home-btnWrapper .btn-submit:hover .btn-submit-outerCircle .btn-submit-ellipse {
+  opacity: 1;
+}
+#csg-container .csg-home-btnWrapper .btn-submit:hover .btn-submit-outerWrapper {
+  opacity: 0;
+}
+#csg-container .csg-home-btnWrapper .btn-submit:hover .btn-submit-text {
+  opacity: 1;
+  height: 90px;
+}
+
+/* service styling
+========================================================================== */
+#csg-container .csg-service-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/csg-banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+}
+#csg-container .csg-service-innerWrapper {
+  padding: 10px;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-service-innerWrapper {
+    padding: 60px 10px 10px 10px;
+  }
+}
+@media (min-width: 61.25em) {
+  #csg-container .csg-service-innerWrapper {
+    padding: 60px 0 10px 5%;
+  }
+}
+#csg-container .csg-service-listWrapper ul {
+  padding-left: 0;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-service-listWrapper ul {
+    padding-left: 40px;
+  }
+}
+@media (min-width: 61.25em) {
+  #csg-container .csg-service-listWrapper ul {
+    padding-left: 40px;
+  }
+}
+#csg-container .csg-service-listWrapper-listItem {
+  list-style: none;
+  margin-bottom: 12px;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-service-listWrapper-listItem {
+    margin-bottom: 15px;
+  }
+}
+#csg-container .csg-service-listWrapper-listItem-originalText {
+  opacity: 1;
+}
+#csg-container .csg-service-listWrapper-listItem-rollOverText {
+  opacity: 0;
+  font-size: 0;
+}
+#csg-container .csg-service-listWrapper-listItem .csg-service-anchor {
+  color: #F6F6FA;
+  font-size: 16px;
+  position: relative;
+  padding-right: 25px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-service-listWrapper-listItem .csg-service-anchor {
+    font-size: 22px;
+  }
+}
+#csg-container .csg-service-listWrapper-listItem .csg-service-anchor:after {
+  background-image: url(https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/right-arrow.png);
+  background-repeat: no-repeat;
+  content: "";
+  width: 9px;
+  height: 16px;
+  display: inline-block;
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -8px;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-service-listWrapper-listItem .csg-service-anchor:after {
+    width: 13px;
+    height: 20px;
+    margin-top: -10px;
+  }
+}
+#csg-container .csg-service-listWrapper-listItem .csg-service-anchor:hover {
+  text-decoration: none;
+}
+#csg-container .csg-service-listWrapper-listItem .csg-service-anchor:hover .csg-service-listWrapper-listItem-originalText {
+  opacity: 0;
+  font-size: 0;
+}
+#csg-container .csg-service-listWrapper-listItem .csg-service-anchor:hover .csg-service-listWrapper-listItem-rollOverText {
+  opacity: 1;
+  font-size: 17px;
+}
+@media (min-width: 46.25em) {
+  #csg-container .csg-service-listWrapper-listItem .csg-service-anchor:hover .csg-service-listWrapper-listItem-rollOverText {
+    font-size: 20px;
+  }
+}
+
+/* Home styling
+========================================================================== */
+#csg-container .csg-product-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+}
+
+.csg-form-error-Block {
+  color: red;
+  background-color: rgba(246, 246, 250, 0.93);
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 15px;
+}
+.csg-form-wrapper {
+  width: 100%;
+  margin-top: 75px;
+}
+@media (min-width: 61.25em) {
+  .csg-form-wrapper {
+    width: 97%;
+  }
+}
+.csg-form-tableFormat {
+  padding: 55px;
+}
+.csg-form-table {
+  width: 100%;
+}
+.csg-form-table tr td {
+  width: 25%;
+  color: #2E2E38;
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+.csg-form-Title {
+  color: #F6F6FA !important;
+  font-size: 25px;
+  font-family: EYInterstate-Regular;
+}
+@media (min-width: 46.25em) {
+  .csg-form-Title {
+    font-size: 19px;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-form-Title {
+    font-size: 25px;
+  }
+}
+.csg-form-selectedAssets {
+  padding: 0;
+}
+.csg-form-selectedAssets-title {
+  font-size: 15px;
+  font-family: EYInterstate-Light;
+  color: #F6F6FA;
+  display: inline-block;
+  margin-right: 15px;
+}
+@media (min-width: 46.25em) {
+  .csg-form-selectedAssets-title {
+    margin-right: 30px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-form-selectedAssets-title {
+    margin-right: 84px;
+    font-size: 20px;
+  }
+}
+.csg-form-selectedAssets-rightSection {
+  line-height: 0;
+}
+.csg-form-selectedAssets-listItem {
+  background-color: #2E2E38;
+  list-style: none;
+  color: #FFE600;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 13px;
+}
+@media (min-width: 46.25em) {
+  .csg-form-selectedAssets-listItem {
+    padding: 15px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-form-selectedAssets-listItem {
+    padding: 35px 20px;
+    font-size: 25px;
+  }
+}
+.csg-form-selectedAssets-listItem .topWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 61.25em) {
+  .csg-form-selectedAssets-listItem .topWrapper {
+    flex-wrap: nowrap;
+  }
+}
+.csg-form-selectedAssets-listItem .topWrapper .radio-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 8px;
+}
+.csg-form-selectedAssets-listItem .topWrapper .radio-wrapper fieldset {
+  display: inline-block;
+  margin-right: 25px;
+}
+.csg-form-selectedAssets-listItem-edit {
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/edit.png");
+  font-size: 0;
+  width: 27px;
+  height: 25px;
+  background-position: center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+}
+.csg-form-selectedAssets-listItem-delete {
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/delete.png");
+  font-size: 0;
+  width: 12px;
+  height: 25px;
+  background-position: center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+}
+@media (min-width: 46.25em) {
+  .csg-form-selectedAssets-listItem-delete {
+    width: 14px;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-form-selectedAssets-listItem-delete {
+    width: 20px;
+  }
+}
+.csg-form-first-step, .csg-form-second-step, .csg-form-third-step {
+  position: relative;
+  margin-bottom: 10px;
+  background-color: rgba(246, 246, 250, 0.93);
+  padding: 85px 10px;
+  font-family: EYInterstate-Light;
+}
+@media (min-width: 46.25em) {
+  .csg-form-first-step, .csg-form-second-step, .csg-form-third-step {
+    padding: 110px 30px 20px 30px;
+  }
+}
+.csg-form-first-step-wrapper, .csg-form-second-step-wrapper, .csg-form-third-step-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.csg-form-third-step {
+  margin-bottom: 35px;
+}
+.csg-form-second-step-wrapper {
+  margin-bottom: 15px;
+}
+.csg-form-third-step-wrapper .csg-form-input {
+  flex-basis: 100%;
+  font-family: EYInterstate-Light;
+}
+@media (min-width: 61.25em) {
+  .csg-form-third-step-wrapper .csg-form-input {
+    flex-basis: 80%;
+  }
+}
+.csg-form-third-step-wrapper .csg-form-input label {
+  flex-basis: 100%;
+}
+@media (min-width: 46.25em) {
+  .csg-form-third-step-wrapper .csg-form-input label {
+    flex-basis: 25%;
+  }
+}
+.csg-form-third-step-wrapper .csg-form-input label .csg-form-note {
+  margin-top: 5px;
+  padding-right: 10px;
+}
+.csg-form-third-step-wrapper .csg-form-input textarea {
+  flex-basis: 100%;
+  height: 250px;
+  resize: none;
+}
+@media (min-width: 46.25em) {
+  .csg-form-third-step-wrapper .csg-form-input textarea {
+    flex-basis: 75%;
+  }
+}
+.csg-form-third-step-wrapper .csg-form-input .csg-form-characterCount {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 100%;
+}
+.csg-form-uploader {
+  display: flex;
+  flex-wrap: wrap;
+}
+.csg-form-uploader .csg-filepicker {
+  flex-basis: 100%;
+}
+.csg-form-uploader .csg-form-uploadSection ul {
+  margin-top: 15px;
+  position: relative;
+}
+.csg-form-uploader .csg-form-uploadSection ul li {
+  list-style: none;
+  padding-right: 60px;
+  border-top: 1px solid #2E2E38;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.csg-form-uploader .csg-form-uploadSection ul li .delete {
+  top: 20%;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  font-size: 0;
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/delete.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 12px;
+  height: 16px;
+}
+.csg-form-input {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+@media (min-width: 46.25em) {
+  .csg-form-input {
+    flex-basis: 100%;
+    margin-bottom: 16px;
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-form-input {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+  }
+}
+.csg-form-input-group {
+  flex-basis: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.csg-form-input-group input[type=text], .csg-form-input-group input[type=email], .csg-form-input-group input[type=number] {
+  flex-basis: 100%;
+  margin-bottom: 5px;
+}
+.csg-form-input-group span {
+  display: block;
+  flex-basis: 100%;
+}
+.csg-form-input .csg-form-note {
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+.csg-form-input .csg-form-files {
+  height: 160px;
+}
+.csg-form-input select {
+  width: 40%;
+  padding: 3px 2px;
+  overflow: hidden;
+  position: relative;
+  background-color: #F6F6FA;
+}
+.csg-form-input select:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #2E2E38;
+  position: absolute;
+  top: 8px;
+  right: 9px;
+}
+.csg-form-input.extraCol select {
+  flex-basis: 16%;
+  background-color: #F6F6FA;
+}
+.csg-form-input.extraCol .text-wrapper {
+  flex-basis: 41%;
+  margin-left: 28px;
+}
+.csg-form-input.extraCol .text-wrapper textarea {
+  overflow: hidden;
+  width: 100%;
+  height: 71%;
+  resize: none;
+}
+.csg-form-input option {
+  font-size: 15px;
+  margin-bottom: 8px;
+  background-color: #F6F6FA;
+}
+.csg-form-input option:hover {
+  font-weight: bold;
+  background: none;
+}
+.csg-form-input option[value="?"] {
+  display: none;
+}
+.csg-form-input input[type=text], .csg-form-input input[type=email], .csg-form-input input[type=number] {
+  border: 1px solid #2E2E38;
+  background-color: #FFFFFF;
+  height: 36px !important;
+}
+.csg-form-input input[type=number]::-webkit-outer-spin-button,
+.csg-form-input input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.csg-form-input input[type=number] {
+  -moz-appearance: textfield;
+}
+.csg-form-input input[name=emailID] {
+  border: none;
+  background-color: transparent;
+}
+.csg-form-input .disableInput {
+  border: 0;
+  background: none;
+}
+.csg-form-input input, .csg-form-input .input-wrapper {
+  flex-basis: 60%;
+  font-size: 18px;
+  font-weight: 500;
+}
+.csg-form-input label {
+  flex-basis: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 46.25em) {
+  .csg-form-input label {
+    font-size: 18px;
+    flex-basis: 40%;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-form-input label {
+    font-size: 20px;
+  }
+}
+.csg-form-input-email {
+  border: 0;
+  outline: 0;
+}
+.csg-form-step-heading {
+  background-color: #FFE600;
+  color: #2E2E38 !important;
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  margin: 0;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  font-size: 18px;
+}
+@media (min-width: 46.25em) {
+  .csg-form-step-heading {
+    font-size: 19px;
+  }
+}
+@media (min-width: 61.25em) {
+  .csg-form-step-heading {
+    font-size: 22px;
+  }
+}
+.csg-form-button-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.csg-form-button-holder {
+  margin-right: 30px;
+}
+.csg-form-button-holder button {
+  background-color: #2E2E38;
+  color: #F6F6FA;
+  font-size: 22px;
+  border: 0 !important;
+}
+.csg-form-button-holder button:hover {
+  color: #FFE600;
+}
+.csg-form-reviewWrapper {
+  background-color: #F6F6FA;
+}
+
+.csg-asset-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://eygb.sharepoint.com/sites/CSG-Test-V2/CSG-Job-Submission-Tool/SiteAssets/CSG-JST-site/assets/img/banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+}
+.csg-asset-wrapper.assets {
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */
